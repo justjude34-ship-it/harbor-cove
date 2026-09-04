@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#000000"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="Notes"/>
+<title>Harbor</title>
+<link rel="manifest" href="./manifest.webmanifest"/>
+<link rel="icon" href="./icon.svg"/>
+<link rel="stylesheet" href="./styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<section id="cover" class="screen">
+  <svg class="art" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="390" height="844" fill="#000"/>
+    <ellipse cx="210" cy="250" rx="160" ry="90" fill="#2a1840" opacity=".55"/>
+    <ellipse cx="120" cy="320" rx="140" ry="80" fill="#3a1030" opacity=".45"/>
+    <ellipse cx="195" cy="560" rx="220" ry="120" fill="#0b2e2c"/>
+    <ellipse cx="195" cy="575" rx="200" ry="90" fill="#123e3c"/>
+    <path d="M40 575C120 540 180 555 195 575C210 555 270 540 350 575C270 610 210 620 195 610C180 620 120 610 40 575Z" fill="#1a5c58" opacity=".7"/>
+    <path d="M168 560h54l-17-12h-20z" fill="#d4b48a"/>
+    <path d="M196 548v-40" stroke="#e8d5b5" stroke-width="2"/>
+    <path d="M196 510l32 18H196z" fill="#d946a6"/>
+  </svg>
+  <div class="copy">
+    <p class="kicker">Harbor</p>
+    <h1>Welcome to your safe harbour</h1>
+    <p class="lede">Quiet water. A private cove. Someone in your corner.</p>
+    <button id="enter" type="button">Enter</button>
+  </div>
+</section>
+<section id="app" class="screen hidden">
+  <header>
+    <div><p class="brand">Harbor</p><p class="sub">You’re home</p></div>
+    <div class="actions"><button id="install" class="ghost" type="button">Install</button><button id="escape" class="ghost" type="button">Escape</button></div>
+  </header>
+  <nav>
+    <button data-tab="mira" class="on">Mira</button>
+    <button data-tab="clear">See clearly</button>
+    <button data-tab="safe">Stay safe</button>
+    <button data-tab="care">Care</button>
+    <button data-tab="help">Help</button>
+  </nav>
+  <main>
+    <div id="tab-mira" class="panel">
+      <h2 class="fuchsia">Talk to Mira</h2>
+      <p class="soft">Specialist in narcissistic patterns. Private to this phone.</p>
+      <div id="chat" class="chat"></div>
+      <div class="row"><button id="mic" class="ghost" type="button">Speak</button><input id="msg" placeholder="Tell Mira what happened"/><button id="send" type="button">Send</button></div>
+    </div>
+    <div id="tab-clear" class="panel hidden">
+      <h2 class="purple">See clearly</h2>
+      <article><h3>Gaslighting</h3><p>They deny what you felt until you doubt yourself. The fact is still the fact.</p></article>
+      <article><h3>Isolation</h3><p>The world shrinks to them. This cove is one door they do not own.</p></article>
+      <article><h3>Idealise, devalue, discard</h3><p>Charm, then criticism, then coldness. That cycle is the strategy.</p></article>
+      <article><h3>Intermittent reward</h3><p>A kind hour after a cruel week is bait, not proof the harm stopped.</p></article>
+    </div>
+    <div id="tab-safe" class="panel hidden">
+      <h2 class="teal">Stay safe</h2>
+      <article><h3>Grey rock</h3><p>Short, dull, factual answers. You are reducing fuel, not winning.</p></article>
+      <article><h3>Covert notes</h3><p>Use Escape if someone walks in. The screen becomes ordinary Notes.</p></article>
+      <article><h3>If it escalates</h3><p>AU 000 · US 911 · UK 999 · CA 911 when you can call safely.</p></article>
+    </div>
+    <div id="tab-care" class="panel hidden">
+      <h2 class="fuchsia">Care</h2>
+      <p class="soft">You are sane. The situation is damaging.</p>
+      <textarea id="journal" rows="6" placeholder="What is true today"></textarea>
+      <p><button id="save" type="button">Save entry</button></p>
+      <div id="log"></div>
+    </div>
+    <div id="tab-help" class="panel hidden">
+      <h2 class="purple">Help lines</h2>
+      <article><h3>Australia</h3><p><a href="tel:000">000</a> · <a href="tel:1800737732">1800RESPECT 1800 737 732</a></p></article>
+      <article><h3>United States</h3><p><a href="tel:911">911</a> · <a href="tel:18007997233">1-800-799-7233</a></p></article>
+      <article><h3>United Kingdom</h3><p><a href="tel:999">999</a> · <a href="tel:08082000247">0808 2000 247</a></p></article>
+      <article><h3>Canada</h3><p><a href="tel:911">911</a> · <a href="tel:18668630511">1-866-863-0511</a></p></article>
+    </div>
+  </main>
+</section>
+<section id="notes" class="screen hidden">
+  <h2 style="padding:1rem">Notes</h2>
+  <form id="unlock" class="pad">
+    <input id="pin" type="password" inputmode="numeric" placeholder="Passcode"/>
+    <button type="submit">Open</button>
+  </form>
+</section>
+<script src="./app.js"></script>
+</body>
+</html>
