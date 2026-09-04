@@ -1,2 +1,2 @@
-# harbor-cove
-Harbor — private safe-harbour companion. Black jewel theme, boat cover, Mira.
+# Harbor
+Safe harbour companion. Open index.html or the Vercel deploy.
